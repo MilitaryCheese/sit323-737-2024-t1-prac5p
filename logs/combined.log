@@ -2,3 +2,18 @@
 {"level":"error","message":"Invalid input: Both parameters must be valid numbers. Received: 2 and asdasd.","service":"calculator-service"}
 {"level":"error","message":"Cannot divide by zero. Received: 2 and 0.","service":"calculator-service"}
 {"level":"error","message":"Cannot divide by zero. Received: 2 and 0.","service":"calculator-service"}
+{"level":"error","message":"Invalid input: Both parameters must be valid numbers. Received: undefined and undefined.","service":"calculator-service"}
+{"level":"error","message":"Invalid input: Both parameters must be valid numbers. Received: undefined and undefined.","service":"calculator-service"}
+{"level":"info","message":"New exponentiation requested: 5 exponentiation 2","service":"calculator-service"}
+{"level":"error","message":"Invalid input: Both parameters must be valid numbers. Received: undefined and undefined.","service":"calculator-service"}
+{"level":"error","message":"Invalid input: Both parameters must be valid numbers. Received: undefined and undefined.","service":"calculator-service"}
+{"level":"error","message":"Invalid input: Both parameters must be valid numbers. Received: 3 and undefined.","service":"calculator-service"}
+{"level":"info","message":"New square root requested: 3 square root undefined","service":"calculator-service"}
+{"level":"info","message":"New square root requested: 9 square root undefined","service":"calculator-service"}
+{"level":"info","message":"New square root requested: 9 square root ","service":"calculator-service"}
+{"level":"info","message":"New modulo requested: 9 modulo 3","service":"calculator-service"}
+{"level":"error","message":"Invalid input: Both parameters must be valid numbers","service":"calculator-service"}
+{"level":"error","message":"Invalid input: Both parameters must be valid numbers","service":"calculator-service"}
+{"level":"info","message":"New exponentiation requested: 5 exponentiation 3","service":"calculator-service"}
+{"level":"info","message":"New square root requested: 25 square root ","service":"calculator-service"}
+{"level":"info","message":"New modulo requested: 25 modulo 3","service":"calculator-service"}
