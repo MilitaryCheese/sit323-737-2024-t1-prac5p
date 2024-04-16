@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    image: keshjay/node-web-app
+    ports:
+      - "3040:3040"
+    environment:
+      - PORT=3040
+    container_name: my-app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3040/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
