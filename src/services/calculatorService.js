@@ -1,60 +1,75 @@
 // Access the logger from the global scope
 const logger = require("../winstonLogger"); // Import the logger
+const db = require("./dbService"); // Import the database service file
 
 // Service functions for calculator operations
-exports.add = (num1, num2) => {
+exports.add = async (num1, num2) => {
   validateNumbers(num1, num2);
+  const result = num1 + num2;
+  await db.addCalculation("add", num1, num2, result);
   logInfo("add", num1, num2);
-  return num1 + num2;
+  return result;
 };
 
-exports.subtract = (num1, num2) => {
+exports.subtract = async (num1, num2) => {
   validateNumbers(num1, num2);
+  const result = num1 - num2;
+  await db.addCalculation("subtract", num1, num2, result);
   logInfo("subtract", num1, num2);
-  return num1 - num2;
+  return result;
 };
 
-exports.multiply = (num1, num2) => {
+exports.multiply = async (num1, num2) => {
   validateNumbers(num1, num2);
+  const result = num1 * num2;
+  await db.addCalculation("multiply", num1, num2, result);
   logInfo("multiply", num1, num2);
-  return num1 * num2;
+  return result;
 };
 
-exports.divide = (num1, num2) => {
+exports.divide = async (num1, num2) => {
   validateNumbers(num1, num2);
   if (num2 === 0) {
     logError("Cannot divide by zero");
     throw new Error("Cannot divide by zero");
   }
+  const result = num1 / num2;
+  await db.addCalculation("divide", num1, num2, result);
   logInfo("divide", num1, num2);
-  return num1 / num2;
+  return result;
 };
 
 // task 4.2 functionality
-exports.exponentiation = (num1, num2) => {
+exports.exponentiation = async (num1, num2) => {
   validateNumbers(num1, num2);
+  const result = Math.pow(num1, num2);
+  await db.addCalculation("exponentiation", num1, num2, result);
   logInfo("exponentiation", num1, num2);
-  return Math.pow(num1, num2);
+  return result;
 };
 
-exports.squareRoot = (num1) => {
+exports.squareRoot = async (num1) => {
   validateNumber(num1);
-  logInfo("square root", num1);
   if (num1 < 0) {
     logError("Cannot calculate square root of a negative number");
     throw new Error("Cannot calculate square root of a negative number");
   }
-  return Math.sqrt(num1);
+  const result = Math.sqrt(num1);
+  await db.addCalculation("squareRoot", num1, undefined, result);
+  logInfo("square root", num1);
+  return result;
 };
 
-exports.modulo = (num1, num2) => {
+exports.modulo = async (num1, num2) => {
   validateNumbers(num1, num2);
-  logInfo("modulo", num1, num2);
   if (num2 === 0) {
     logError("Cannot perform modulo operation with divisor as zero");
     throw new Error("Cannot perform modulo operation with divisor as zero");
   }
-  return num1 % num2;
+  const result = num1 % num2;
+  await db.addCalculation("modulo", num1, num2, result);
+  logInfo("modulo", num1, num2);
+  return result;
 };
 
 // Additional functions for validation and logging

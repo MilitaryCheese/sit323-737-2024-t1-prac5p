@@ -19,6 +19,6 @@ spec:
       containers:
         - name: mynode
           imagePullPolicy: Never
-          image: keshjay/node-web-app:latest
+          image: keshjay/node-web-app:1.1.1.2
           ports:
             - containerPort: 3040
