@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const calculatorController = require("../controllers/calculatorController");
+const dbConroller = require("../controllers/dbController");
 
 router.post("/add", calculatorController.add);
 router.post("/subtract", calculatorController.subtract);
@@ -11,5 +12,10 @@ router.post("/divide", calculatorController.divide);
 router.post("/exponentiation", calculatorController.exponentiation);
 router.post("/square-root", calculatorController.squareRoot);
 router.post("/modulo", calculatorController.modulo);
+
+// Task 9.1 functionality - exposing endpoints to get data from the db
+router.post("/get-calculations", dbConroller.getCalculations);
+router.post("/update-calculations", dbConroller.updateCalculations);
+router.post("/delete-calculations", dbConroller.deleteCalculations);
 
 module.exports = router;

@@ -27,7 +27,6 @@ const Calculation = mongoose.model("Calculation", calculationSchema);
 exports.addCalculation = async (operation, num1, num2, result) => {
   const calculation = new Calculation({ operation, operand1: num1, operand2: num2, result });
   await calculation.save();
-  console.log(calculation);
   return calculation;
 };
 
