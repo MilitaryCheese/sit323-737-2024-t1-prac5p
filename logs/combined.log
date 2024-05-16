@@ -17,3 +17,23 @@
 {"level":"info","message":"New exponentiation requested: 5 exponentiation 3","service":"calculator-service"}
 {"level":"info","message":"New square root requested: 25 square root ","service":"calculator-service"}
 {"level":"info","message":"New modulo requested: 25 modulo 3","service":"calculator-service"}
+{"level":"info","message":"New subtract requested: 34 subtract 32","service":"calculator-service"}
+{"level":"info","message":"New subtract requested: 34 subtract 32","service":"calculator-service"}
+{"level":"info","message":"New subtract requested: 34 subtract 32","service":"calculator-service"}
+{"level":"info","message":"New add requested: 34 add 32","service":"calculator-service"}
+{"level":"info","message":"New subtract requested: 34 subtract 32","service":"calculator-service"}
+{"level":"info","message":"New add requested: 34 add 32","service":"calculator-service"}
+{"level":"info","message":"New add requested: 34 add 32","service":"calculator-service"}
+{"level":"info","message":"New add requested: 34 add 32","service":"calculator-service"}
+{"level":"info","message":"New add requested: 34 add 32","service":"calculator-service"}
+{"level":"info","message":"New add requested: 34 add 32","service":"calculator-service"}
+{"level":"info","message":"New add requested: 34 add 32","service":"calculator-service"}
+{"level":"info","message":"New add requested: 34 add 32","service":"calculator-service"}
+{"level":"info","message":"New add requested: 4234234 add 32","service":"calculator-service"}
+{"level":"info","message":"New subtract requested: 4234234 subtract 32","service":"calculator-service"}
+{"level":"info","message":"New multiply requested: 4 multiply 12","service":"calculator-service"}
+{"level":"info","message":"New divide requested: 36 divide 9","service":"calculator-service"}
+{"level":"info","message":"New exponentiation requested: 2 exponentiation 4","service":"calculator-service"}
+{"level":"info","message":"New square root requested: 2 square root ","service":"calculator-service"}
+{"level":"info","message":"New square root requested: 9 square root ","service":"calculator-service"}
+{"level":"info","message":"New modulo requested: 9 modulo 2","service":"calculator-service"}
