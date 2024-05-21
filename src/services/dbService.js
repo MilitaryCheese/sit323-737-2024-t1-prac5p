@@ -2,13 +2,23 @@ const mongoose = require("mongoose");
 
 mongoose.set("strictQuery", false);
 
-// Define the database URL to connect to.
-const mongoDB = "mongodb://mongo/my_database";
+const userNameDB = process.env.MONGO_INITDB_ROOT_USERNAME;
+const passwordDB = process.env.MONGO_INITDB_ROOT_PASSWORD;
 
-// Wait for database to connect, logging an error if there is a problem
-main().catch((err) => console.log(err));
+const mongoDB = `mongodb://${userNameDB}:${passwordDB}@mongo-service:32001`;
+
+mongodb: main().catch((err) => console.log(err));
 async function main() {
-  await mongoose.connect(mongoDB);
+  try {
+    console.log("Connecting to database ...");
+    await mongoose.connect(mongoDB);
+    console.log("Connected to database");
+
+    const db = mongoose.connection.db;
+    const collection = db.collection("my_database");
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 // Define Calculation Schema
@@ -45,3 +55,5 @@ exports.updateCalculation = async (calculationId, updates) => {
 exports.deleteCalculation = async (calculationId) => {
   return await Calculation.findByIdAndDelete(calculationId);
 };
+
+// const mongoDB = `mongodb://admin1:password@10.98.185.190:32001/`;

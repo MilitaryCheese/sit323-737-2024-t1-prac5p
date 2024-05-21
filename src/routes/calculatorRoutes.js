@@ -14,8 +14,8 @@ router.post("/square-root", calculatorController.squareRoot);
 router.post("/modulo", calculatorController.modulo);
 
 // Task 9.1 functionality - exposing endpoints to get data from the db
-router.post("/get-calculations", dbConroller.getCalculations);
-router.post("/update-calculations", dbConroller.updateCalculations);
-router.post("/delete-calculations", dbConroller.deleteCalculations);
+router.get("/get-calculations", dbConroller.getCalculations);
+router.put("/update-calculations", dbConroller.updateCalculations);
+router.delete("/delete-calculations", dbConroller.deleteCalculations);
 
 module.exports = router;

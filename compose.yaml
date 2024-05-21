@@ -2,7 +2,7 @@ version: "3.8"
 services:
   app:
     build: .
-    image: australia-southeast2-docker.pkg.dev/sit737-24t1-rajakaruna-9be57e0/cloud-native-unit/node-web-app:1.1.1.4
+    image: node-web-app:1.1.1.5
     ports:
       - "3040:3040"
     environment:

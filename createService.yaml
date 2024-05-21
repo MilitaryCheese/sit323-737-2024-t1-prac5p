@@ -5,7 +5,6 @@ metadata:
 spec:
   selector:
     tier: microservice
-  clusterIP: 10.99.132.220
   externalTrafficPolicy: Cluster
   ports:
     - name: myport

@@ -8,7 +8,7 @@ spec:
   accessModes:
     - ReadWriteMany
   local:
-    path: /run/desktop/mnt/host/C/Users/fala0014/Downloads/Deakin-SIT323-2024/Week-7/MyMappedFolder
+    path: /run/desktop/mnt/host/Users/keshjayasinghe/Documents/737/PV
   nodeAffinity:
     required:
       nodeSelectorTerms:
